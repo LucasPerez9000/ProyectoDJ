@@ -1,0 +1,589 @@
+    *{
+    margin: 0;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+.gridContainerHeader{
+    height: 90px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area: "Header";
+}
+.gridContainerFooter{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area: "Footer";
+}
+
+/*------------------------------HEADER HEADER HEADER (TODAS LAS PESTAÑAS)------------------------------*/
+.gridContainerHeader header{
+    background-color: rgb(20, 18, 18);
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+    padding: 10px;
+    position: fixed;
+} 
+.gridContainerHeader header .contenedorBarra{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.gridContainerHeader header .contenedorBarra ul{
+display: flex;
+list-style: none;
+align-items: center;
+flex-wrap: wrap;
+
+}
+.gridContainerHeader header .contenedorBarra ul li a{
+    text-decoration: none;
+    padding: 15px;
+    color: gray;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.5s;
+}
+.gridContainerHeader header .contenedorBarra ul li a:hover{
+    color: #7613f8d2;
+    font-size: 30px;
+}
+
+
+.gridContainerHeader header .contenedorBarra a img{
+    height: 70px;
+    padding-left: 15px;
+    transition: height 0.5s;
+}
+.gridContainerHeader header .contenedorBarra a img:hover{
+height: 73px;
+}
+
+
+
+
+/*------------------------------FOOTER  FOOTER  FOOTER------------------------------ */
+.gridContainerFooter footer{
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
+
+.gridContainerFooter h3{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    font-weight: normal;
+} 
+.gridContainerFooter footer ul li{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 5px;
+}
+.gridContainerFooter footer div{
+    text-align: center;
+}
+.gridContainerFooter footer p{
+    color: white;
+    text-align: center;
+}
+.gridContainerFooter footer p a{
+    color: white;
+}
+.gridContainerFooter footer p a:hover{
+    color: #7613f8d2;
+}
+.gridContainerFooter footer div a{
+    color: black;
+}
+
+.gridContainerFooter footer div a i{
+    color: grey;
+    font-size: 30px;
+    padding: 15px;
+    padding-bottom: 50px;
+    transition: font-size 0.5s ;
+
+}
+.gridContainerFooter footer i:hover{
+    color: #7613f8d2;
+    font-size: 40px;
+}
+
+@media screen and(max-width:1000px) {
+    .gridContainerFooter {
+    width: 100%;
+    }
+}
+
+
+
+
+
+
+/*------------------------------INDEX  INDEX  INDEX------------------------------ */
+.gridContainerIndex{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-area:  "Main"
+                "LatestReleases"
+                "NextDates";
+}
+
+/*MAIN MAIN MAIN*/
+.gridContainerIndex main{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    padding-bottom: 50px;
+    background-image: url(/Imagenes/Foto\ djs.png) ;
+    background-size: cover;
+}
+.gridContainerIndex main .logoPrincipal{
+    display: flex;
+    justify-content: center;
+    
+}
+.gridContainerIndex main .logoPrincipal img{
+    height: 700px;
+    
+}
+/*.gridContainerIndex main h1{
+    text-align: center;
+    font-size: 120px;
+    color: grey;
+    font-family: 'Cinzel Decorative', cursive;
+    padding-top: 10%;
+    text-transform: capitalize;  
+}
+
+.gridContainerIndex main .subtitulo{
+    text-align: center;
+    font-size: 65px;
+    color: grey;
+    font-family: 'Cinzel Decorative', cursive;
+    padding-top: 1%;
+}
+
+.gridContainerIndex main h1 span{
+    color: black;
+}
+.gridContainerIndex main h3 span{
+    color: black;
+}
+*/
+.gridContainerIndex main .redesSociales {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    text-decoration: none;
+    padding-top: 50px;
+}
+.gridContainerIndex main .redesSociales a i {
+    color: grey;
+    padding: 15px;
+    transition: font-size 0.5s;
+}
+
+.gridContainerIndex main .redesSociales a i:hover{
+    color: #7613f8d2;
+    font-size: 70px;
+}
+
+
+/*LATEST RELEASES SECTION*/
+h2{
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;;
+}
+
+.gridContainerIndex .latestReleasesSection{
+    padding: 30px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    background-color: rgb(20, 18, 18);
+}
+.gridContainerIndex .latestReleasesSection .ultimosSencillos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around
+}
+.gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
+    height: 400px;
+    width: 400px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    border-radius: 12px ;
+    transition: all 0.5s;
+}
+.gridContainerIndex .latestReleasesSection .ultimosSencillos iframe:hover{
+    height: 410px;
+    width: 410px;
+}
+.gridContainerIndex .latestReleasesSection .contenedorBoton{
+    display: flex;
+    justify-content: center;
+}
+.gridContainerIndex .latestReleasesSection button{
+    padding: 10px;
+    margin-top: 50px;
+    background-color: grey;
+    border: 1px solid black;
+    transition: all 0.5s;
+}
+.gridContainerIndex .latestReleasesSection button:hover{
+    background-color: #7613f8d2;
+}
+.gridContainerIndex .latestReleasesSection button a{
+    text-decoration: none;
+    color: rgb(20, 18, 18);
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media  screen and (max-width:600px) {
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
+        height: 300px;
+        width: auto;
+    }
+}
+
+/*NEXT DATES SECTION*/
+.gridContainerIndex .nextDatesSection{
+    padding: 50px;
+    background-color: rgb(53, 51, 51);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.gridContainerIndex .nextDatesSection .nextDatesDiv .fiestas li{
+    color: white;
+    margin: 50px;
+    font-size: 25px;
+    margin-left: 150px;
+}
+
+/*@media screen and (max-width:1300px){
+    .gridContainerIndex main h1{
+        font-size: 100px;
+    }
+} */
+
+@media screen and (max-width:1300px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 550px;
+    }
+    
+}
+@media screen and (max-width:1000px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 350px;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 200px;
+        margin-top: 100px;
+    }
+    
+}
+
+
+
+/*@media screen and (max-width:1000px){
+    .gridContainerIndex main h1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } */
+
+
+    .gridContainerIndex main .logoInstagram i{
+        display: flex;
+        justify-content: center;
+    }
+    .gridContainerIndex main .logoSpotify i{
+        display: flex;
+        justify-content: center;
+    }
+    .gridContainerIndex main .logoYoutube i{
+        display: flex;
+        justify-content: center;
+    }
+
+
+/*@media screen and (max-width:600px){
+    .gridContainerIndex main h1{
+        font-size: 50px;
+    }
+    .gridContainerIndex main .subtitulo{
+        font-size: 40px; 
+        display: flex;
+        justify-content: center;
+    }
+}*/
+
+
+/*------------------------------MUSIC MUSIC MUSIC------------------------------ */
+.gridContainerMusic{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area:  "Releases";
+}
+.gridContainerMusic .musicReleases{
+    background-color: rgb(53, 51, 51);
+}
+.gridContainerMusic .musicReleases div .tituloReleases{
+    
+    padding-top: 100px;
+}
+.gridContainerMusic .musicReleases .releases{
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+.gridContainerMusic .musicReleases .releases iframe{
+    height: 360px;
+    width: 360px;
+    border-radius: 30px;
+    padding: 20px;
+    padding-bottom: 100px;
+    transition: all 0.5s;
+}
+.gridContainerMusic .musicReleases .releases iframe:hover{
+    height: 390px;
+    width: 390px;
+}
+
+@media screen and (max-width:600px) {
+    .gridContainerMusic .musicReleases .releases iframe{
+        height: 300px;
+        width: auto;
+    }
+}
+
+
+/*------------------------------MEDIA MEDIA MEDIA------------------------------ */
+.gridContainerMedia{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area:  "Releases";
+}
+.sectionMedia{
+    background-color: rgb(53, 51, 51);
+}
+.sectionMedia div{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.sectionMedia div img{
+    width: 700px;
+
+    transition: width 0.5s ;
+}
+.sectionMedia img:hover{
+width: 720px ;
+}
+
+@media screen and (max-width:1200px) {
+    .gridContainerMedia .sectionMedia div{
+        display: flex;
+        justify-content: center;
+    }
+    .gridContainerMedia .sectionMedia div img{
+        height: 500px;
+        width: auto;
+    }
+    
+}
+
+@media screen and (max-width:600px) {
+    .gridContainerMedia .sectionMedia div{
+        display: flex;
+        justify-content: center;
+    }
+    .gridContainerMedia .sectionMedia div img{
+        height: 250px;
+        width: auto;
+    }
+    
+}
+
+
+
+
+
+
+/*------------------------------BIO BIO BIO------------------------------ */
+.gridContainerBio{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area:  "Contenido";
+}
+.sectionBio{
+    background-color: rgb(53, 51, 51);
+}
+.divBio{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.sectionBio img{
+height:900px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+padding: 100px;
+transition: height 0.5s ;
+}
+.sectionBio img:hover{
+    height: 920px;
+}
+.sectionBio .divBio p{
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    padding: 80px;
+    color: white;
+}
+
+.sectionBio .divBio p:hover{
+    color: #7613f8d2;
+
+}
+
+@media screen and (max-width:1300px){
+    .gridContainerBio .divBio{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+        .gridContainerBio .divBio img{
+            display:flex ;
+            justify-content: center;
+            height: 500px;
+            overflow: inherit;
+        }
+    }
+        @media screen and (max-width:600px){
+                .gridContainerBio .divBio img{
+                    display:flex ;
+                    justify-content: center;
+                    height: 350px;
+                    overflow: inherit;
+                }
+                .gridContainerBio .divBio p{
+                    font-size: 15px;
+                }
+            }
+        
+
+
+
+/*------------------------------BE PART BE PART BE PART------------------------------ */
+.gridContainerFormulario{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area:  "Formulario";
+}
+.sectionFormulario{
+    background-color: rgb(53, 51, 51);
+    height: 900px;
+}
+.sectionFormulario div{
+    width: 500px;
+    background-color: rgb(47, 87, 88);
+    padding: 30px;
+    margin: auto;
+    margin-top: 65px;
+    border-radius: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white; 
+}
+.sectionFormulario div h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.sectionFormulario div .controls{
+    width: 100%;
+    background-color: rgb(47, 87, 88);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-size: 18px;
+}
+.sectionFormulario div textarea{
+    resize: none;
+}
+.sectionFormulario div p{
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+.sectionFormulario div a{
+    color: white;
+    text-decoration: none;
+}
+.sectionFormulario div a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.sectionFormulario div .buttons{
+    width: 100%;
+    background: rgb(100, 100, 212);
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
