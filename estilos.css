@@ -386,19 +386,30 @@ h2{
 width: 720px ;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1300px) {
     .gridContainerMedia .sectionMedia div{
         display: flex;
         justify-content: center;
     }
     .gridContainerMedia .sectionMedia div img{
-        height: 500px;
+        height: 450px;
         width: auto;
     }
     
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:1000px) {
+    .gridContainerMedia .sectionMedia div{
+        display: flex;
+        justify-content: center;
+    }
+    .gridContainerMedia .sectionMedia div img{
+        height: 350px;
+        width: auto;
+    }
+    
+}
+@media screen and (max-width:700px) {
     .gridContainerMedia .sectionMedia div{
         display: flex;
         justify-content: center;
