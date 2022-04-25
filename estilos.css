@@ -513,7 +513,7 @@ transition: height 0.5s ;
     margin-bottom: 20px;
 }
 .sectionFormulario div .controls{
-    width: 100%;
+    width: 96%;
     background-color: rgb(47, 87, 88);
     padding: 10px;
     border-radius: 4px;
@@ -522,7 +522,7 @@ transition: height 0.5s ;
     font-size: 18px;
 }
 .sectionFormulario div textarea{
-    resize: none;
+    width: 100%;
 }
 .sectionFormulario div p{
     height: 40px;
@@ -545,4 +545,14 @@ transition: height 0.5s ;
     color: white;
     margin: 16px 0;
     font-size: 16px;
+}
+@media screen and (max-width: 1000px) {
+    .gridContainerFormulario .sectionFormulario div{
+    width: 400px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .gridContainerFormulario .sectionFormulario div{
+    width: 300px;
+    }
 }
