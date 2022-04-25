@@ -173,30 +173,7 @@ height: 90px;
     height: 700px;
     
 }
-/*.gridContainerIndex main h1{
-    text-align: center;
-    font-size: 120px;
-    color: grey;
-    font-family: 'Cinzel Decorative', cursive;
-    padding-top: 10%;
-    text-transform: capitalize;  
-}
 
-.gridContainerIndex main .subtitulo{
-    text-align: center;
-    font-size: 65px;
-    color: grey;
-    font-family: 'Cinzel Decorative', cursive;
-    padding-top: 1%;
-}
-
-.gridContainerIndex main h1 span{
-    color: black;
-}
-.gridContainerIndex main h3 span{
-    color: black;
-}
-*/
 .gridContainerIndex main .redesSociales {
     display: flex;
     justify-content: center;
@@ -298,11 +275,6 @@ h2{
     margin-left: 150px;
 }
 
-/*@media screen and (max-width:1300px){
-    .gridContainerIndex main h1{
-        font-size: 100px;
-    }
-} */
 
 @media screen and (max-width:1300px) {
     .gridContainerIndex main .logoPrincipal img{
@@ -326,13 +298,6 @@ h2{
 
 
 
-/*@media screen and (max-width:1000px){
-    .gridContainerIndex main h1{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    } */
-
 
     .gridContainerIndex main .logoInstagram i{
         display: flex;
@@ -347,17 +312,6 @@ h2{
         justify-content: center;
     }
 
-
-/*@media screen and (max-width:600px){
-    .gridContainerIndex main h1{
-        font-size: 50px;
-    }
-    .gridContainerIndex main .subtitulo{
-        font-size: 40px; 
-        display: flex;
-        justify-content: center;
-    }
-}*/
 
 
 /*------------------------------MUSIC MUSIC MUSIC------------------------------ */
