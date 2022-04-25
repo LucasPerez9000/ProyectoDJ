@@ -556,6 +556,10 @@ transition: height 0.5s ;
     color: white;
     margin: 16px 0;
     font-size: 16px;
+    transition: all 1s;
+}
+.sectionFormulario div .buttons:hover{
+    background: rgb(118, 61, 184);
 }
 @media screen and (max-width: 1000px) {
     .gridContainerFormulario .sectionFormulario div{
