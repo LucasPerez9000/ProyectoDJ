@@ -161,7 +161,7 @@ height: 90px;
     grid-column-end: 2;
     
     padding-bottom: 50px;
-    background-image: url(/Imagenes/Fotodjs.png);
+    background-image: url(Imagenes/Fotodjs.png);
     background-size: cover;
 }
 .gridContainerIndex main .logoPrincipal{
