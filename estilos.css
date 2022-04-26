@@ -415,7 +415,7 @@ width: 720px ;
         justify-content: center;
     }
     .gridContainerMedia .sectionMedia div img{
-        height: 250px;
+        height: 200px;
         width: auto;
     }
     
@@ -505,6 +505,10 @@ transition: height 0.5s ;
     grid-template-rows: auto;
     grid-area:  "Formulario";
 }
+.gridContainerFormulario .tituloFormulario{
+    font-size: 35px;
+    margin-top: 20px;
+}
 .sectionFormulario{
     background-color: rgb(53, 51, 51);
     height: 900px;
@@ -569,5 +573,15 @@ transition: height 0.5s ;
 @media screen and (max-width: 600px) {
     .gridContainerFormulario .sectionFormulario div{
     width: 300px;
+    }
+}
+@media screen and (max-width:600px) {
+    .gridContainerFormulario .tituloFormulario{
+        font-size: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
