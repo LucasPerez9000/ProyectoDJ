@@ -360,6 +360,7 @@ h2{
 
 
 /*------------------------------MEDIA MEDIA MEDIA------------------------------ */
+/*
 .gridContainerMedia{
     height: 100%;
     width: 100%;
@@ -421,7 +422,10 @@ width: 720px ;
     
 }
 
-
+*/
+div img{
+    height: 100% ;
+}
 
 
 
