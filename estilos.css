@@ -39,6 +39,7 @@ html{
     justify-content: space-between;
     padding-right: 15px;
 }
+
 .gridContainerHeader header .contenedorBarra ul{
 display: flex;
 list-style: none;
@@ -47,6 +48,8 @@ flex-wrap: wrap;
 
 }
 .gridContainerHeader header .contenedorBarra ul li a{
+    display: flex;
+    justify-content: end;
     text-decoration: none;
     padding: 15px;
     color: gray;
@@ -68,6 +71,55 @@ flex-wrap: wrap;
 .gridContainerHeader header .contenedorBarra a img:hover{
 height: 90px;
 }
+
+.gridContainerHeader header .contenedorBarra label i{
+    display: none;
+}
+#btn-menu{
+    display: none;
+}
+
+
+@media screen and (max-width:1024px){
+    #btn-menu{
+    
+        display: none;
+    }
+    .gridContainerHeader header .contenedorBarra label i{
+        display: block;
+        position: fixed;
+        top: 30px;
+        color: #7613f8d2;
+        right: 30px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+    .gridContainerHeader header .contenedorBarra ul{
+        display: block;
+        position: fixed;
+        top: 95px;
+        left: -100%;
+        background: rgb(20, 18, 18);
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        
+    }
+    .gridContainerHeader header .contenedorBarra ul li{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    }
+    .gridContainerHeader header .contenedorBarra ul li:last-child{
+        padding: 2rem;
+    }
+    #btn-menu:checked ~ ul{
+        left: 0;
+        transition: all 0.5s;
+    }
+}
+
+
 
 
 
@@ -131,7 +183,7 @@ height: 90px;
     font-size: 40px;
 }
 
-@media screen and(max-width:1000px) {
+@media screen and(max-width:1024px) {
     .gridContainerFooter {
     width: 100%;
     }
@@ -255,7 +307,13 @@ h2{
     .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
         height: 300px;
         width: auto;
+        transition: all 0.5s;
     }
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe:hover{
+        height: 310px;
+        width: auto;
+    }
+
 }
 
 /*NEXT DATES SECTION*/
@@ -276,24 +334,30 @@ h2{
 }
 
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1200px) {
     .gridContainerIndex main .logoPrincipal img{
         height: 550px;
     }
     
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1024px) {
     .gridContainerIndex main .logoPrincipal img{
         height: 350px;
-    }
-    
-}
-@media screen and (max-width:600px) {
-    .gridContainerIndex main .logoPrincipal img{
-        height: 200px;
         margin-top: 100px;
     }
     
+}
+@media screen and (max-width:768px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 250px;
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:320px) {
+        .gridContainerIndex main .logoPrincipal img{
+            height: 200px;
+            margin-top: 100px;
+        }  
 }
 
 
@@ -455,20 +519,17 @@ padding: 100px;
 transition: height 0.5s ;
 }
 .sectionBio img:hover{
-    height: 920px;
+    height: 905px;
 }
 .sectionBio .divBio p{
     display: flex;
     font-size: 20px;
     align-items: center;
     padding: 80px;
-    color: white;
+    color: grey;
 }
 
-.sectionBio .divBio p:hover{
-    color: #7613f8d2;
 
-}
 
 @media screen and (max-width:1300px){
     .gridContainerBio .divBio{
