@@ -85,17 +85,19 @@ height: 90px;
     
         display: none;
     }
+    .gridContainerHeader header .contenedorBarra label{
+        display: flex;
+        align-items: center;
+    }
     .gridContainerHeader header .contenedorBarra label i{
-        display: block;
-        position: fixed;
-        top: 30px;
+        display: flex;
         color: #7613f8d2;
-        right: 30px;
         font-size: 40px;
         cursor: pointer;
     }
     .gridContainerHeader header .contenedorBarra ul{
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: fixed;
         top: 95px;
         left: -100%;
@@ -116,6 +118,9 @@ height: 90px;
     #btn-menu:checked ~ ul{
         left: 0;
         transition: all 0.5s;
+    }
+    .gridContainerHeader header .contenedorBarra ul li .contacto{
+        display: none;
     }
 }
 
@@ -325,12 +330,17 @@ h2{
     grid-row-start: 3;
     grid-row-end: 4;
 }
+.gridContainerIndex .nextDatesSection .nextDatesDiv .fiestas{
+    display: flex;
+    flex-direction: column;
+    
 
+}
 .gridContainerIndex .nextDatesSection .nextDatesDiv .fiestas li{
     color: white;
-    margin: 50px;
+    margin: 40px;
     font-size: 25px;
-    margin-left: 150px;
+    
 }
 
 
@@ -349,13 +359,13 @@ h2{
 }
 @media screen and (max-width:768px) {
     .gridContainerIndex main .logoPrincipal img{
-        height: 250px;
+        height: 200px;
         margin-top: 100px;
     }
 }
 @media screen and (max-width:320px) {
         .gridContainerIndex main .logoPrincipal img{
-            height: 200px;
+            height: 150px;
             margin-top: 100px;
         }  
 }
@@ -413,14 +423,21 @@ h2{
     height: 370px;
     width: 370px;
 }
-
-@media screen and (max-width:600px) {
+@media screen and (max-width:1200px){
     .gridContainerMusic .musicReleases .releases iframe{
         height: 300px;
-        width: auto;
+        width: 300px;
     }
 }
+@media screen and (max-width:1024px){
+    .gridContainerMusic .musicReleases .releases iframe{
+        height: 250px;
+        width: 250px;
+}
+@media screen and (max-width:728px){
 
+}
+}
 
 /*------------------------------MEDIA MEDIA MEDIA------------------------------ */
 
