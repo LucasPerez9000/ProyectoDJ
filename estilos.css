@@ -308,17 +308,22 @@ h2{
     font-size: 22px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-@media  screen and (max-width:600px) {
+@media  screen and (max-width:768px) {
     .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
-        height: 300px;
-        width: auto;
+        height: 250px;
+        width: 260px;
         transition: all 0.5s;
     }
     .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe:hover{
-        height: 310px;
-        width: auto;
+        height: 260px;
+        width: 260px;
     }
-
+}
+    @media  screen and (max-width:320px) {
+        .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
+            height: auto;
+            width: 250px;
+        }
 }
 
 /*NEXT DATES SECTION*/
@@ -359,9 +364,10 @@ h2{
 }
 @media screen and (max-width:768px) {
     .gridContainerIndex main .logoPrincipal img{
-        height: 200px;
+        height: 250px;
         margin-top: 100px;
     }
+
 }
 @media screen and (max-width:320px) {
         .gridContainerIndex main .logoPrincipal img{
@@ -427,17 +433,38 @@ h2{
     .gridContainerMusic .musicReleases .releases iframe{
         height: 300px;
         width: 300px;
+        border-radius: 50px;
+        transition: all 0.5s;
     }
-}
-@media screen and (max-width:1024px){
+    .gridContainerMusic .musicReleases .releases iframe:hover{
+        height: 310px;
+        width: 310px;
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+}    
+
+@media screen and (max-width:728px){
     .gridContainerMusic .musicReleases .releases iframe{
         height: 250px;
         width: 250px;
+        border-radius: 12px;
+        transition: all 0.5s;
+        padding: 0px;
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width:320px){
+        .gridContainerMusic .musicReleases .releases iframe{
+            height: auto;
+            width: 250px;
+            border-radius: 10px;
+            transition: all 0.5s;
+            padding: 0px;
+            margin-bottom: 40px;
+        }
+    }
 }
-@media screen and (max-width:728px){
 
-}
-}
 
 /*------------------------------MEDIA MEDIA MEDIA------------------------------ */
 
