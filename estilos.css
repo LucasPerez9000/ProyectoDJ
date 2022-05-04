@@ -592,7 +592,7 @@ transition: height 0.5s ;
                 .gridContainerBio .divBio img{
                     display:flex ;
                     justify-content: center;
-                    height: 350px;
+                    height: 500px;
                     overflow: inherit;
                 }
                 .gridContainerBio .divBio p{
@@ -607,6 +607,8 @@ transition: height 0.5s ;
 .gridContainerFormulario{
     height: 100%;
     width: 100%;
+    padding-top: 50px ;
+    
 
     display: grid;
     grid-template-columns: 1fr;
