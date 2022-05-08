@@ -6,6 +6,9 @@ html{
     scroll-behavior: smooth;
 }
 
+/*    HEADER HEADER     */
+
+
 .gridContainerHeader{
     height: 90px;
     width: 100%;
@@ -120,5 +123,86 @@ html{
 
     .gridContainerHeader header .contenedorBarra ul li .contacto{
         display: none;
+    }
+}
+
+
+/*   FOOTER    FOOTER   */
+
+.gridContainerFooter{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area: "Footer";
+    
+    footer{
+        background-color: black;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        h3{
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding-top: 50px;
+            font-weight: normal;
+            margin-bottom: 40px;
+
+            ul{
+                margin: 30px;
+                list-style: none;
+
+                li{
+                    color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    padding-top: 5px;
+                }
+            }
+        } 
+
+        .booking{
+            color: white;
+
+            li a{
+                color: white;
+
+                &:hover{
+                    color: #7613f8d2;
+                }
+            }
+        }
+
+        div{
+            text-align: center;
+            
+            a{
+                color: black;
+
+                i{
+                    color: grey;
+                    font-size: 30px;
+                    padding: 15px;
+                    padding-bottom: 50px;
+                    transition: font-size 0.5s ;
+
+                    &:hover{
+                        color: #7613f8d2;
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:1024px) {
+    .gridContainerFooter {
+    width: 100%;
     }
 }
