@@ -1,14 +1,18 @@
+$color1: rgb(20, 18, 18);
+$color2: #7613f8d2;
+$color3: white;
+$color4: gray;
+$color5: rgb(53, 51, 51);
+
 *{
     margin: 0;
-    padding: 0;
+    padding: 0px;
 }
 html{
     scroll-behavior: smooth;
 }
 
-/*    HEADER HEADER     */
-
-
+/*    HEADER    HEADER    */
 .gridContainerHeader{
     height: 90px;
     width: 100%;
@@ -18,7 +22,7 @@ html{
     grid-area: "Header";
 
     header{
-        background-color: rgb(20, 18, 18);
+        background-color: $color1;
         width: 100%;
         grid-column-start: 1;
         grid-column-end: 2;
@@ -33,52 +37,52 @@ html{
             justify-content: space-between;
             padding-right: 15px;
 
+            img{
+                height: 85px;
+                padding-left: 5px;
+                transition: height 0.5s;
+
+                &:hover{
+                    height: 90px;
+                }
+            }
+
             ul{
                 display: flex;
                 list-style: none;
                 align-items: center;
                 flex-wrap: wrap;
-
+                
                 li a{
                     display: flex;
                     justify-content: end;
                     text-decoration: none;
                     padding: 15px;
-                    color: gray;
+                    color: $color4;
                     font-size: 26px;
                     font-family: 'Roboto', sans-serif;
                     transition: all 0.5s;
+
                     &:hover{
-                        color: #7613f8d2;
+                        color: $color2;
                         font-size: 30px;
                     }
                 }
             }
+            label i{
+                display: none;
+                margin-right: 15px;
+            }
         }
     } 
-}    
-
-.gridContainerHeader header .contenedorBarra a img{
-    height: 85px;
-    padding-left: 5px;
-    transition: height 0.5s;
-
-    &:hover{
-        height: 90px;
-        }
 }
-
-.gridContainerHeader header .contenedorBarra label i{
-    display: none;
-}
-
 #btn-menu{
     display: none;
+    
 }
 
 @media screen and (max-width:1024px){
     #btn-menu{
-    
         display: none;
     }
 
@@ -88,8 +92,8 @@ html{
 
         i{
             display: flex;
-            color: #7613f8d2;
-            font-size: 40px;
+            color: $color2;
+            font-size: 45px;
             cursor: pointer;
         }
     }
@@ -100,34 +104,31 @@ html{
         position: fixed;
         top: 95px;
         left: -100%;
-        background: rgb(20, 18, 18);
+        background: $color1;
         width: 100%;
         height: 100vh;
         right: 0;
-
+        
         li{
             display: flex;
             justify-content: center;
             margin: 0;
-            }
-        
-    }
-    .gridContainerHeader header .contenedorBarra ul li:last-child{
-        padding: 2rem;
-    }
 
+            :last-child{
+                padding: 2rem;
+            }
+            .contacto{
+                display: none;
+            }
+        }
+    }
     #btn-menu:checked ~ ul{
         left: 0;
         transition: all 0.5s;
     }
-
-    .gridContainerHeader header .contenedorBarra ul li .contacto{
-        display: none;
-    }
 }
 
-
-/*   FOOTER    FOOTER   */
+/*    FOOTER    FOOTER    */
 
 .gridContainerFooter{
     width: 100%;
@@ -136,7 +137,7 @@ html{
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-area: "Footer";
-    
+
     footer{
         background-color: black;
         grid-column-start: 1;
@@ -145,57 +146,54 @@ html{
         grid-row-end: 2;
 
         h3{
-            color: white;
+            color: $color3;
             text-align: center;
             font-size: 40px;
             font-family: Georgia, 'Times New Roman', Times, serif;
             padding-top: 50px;
             font-weight: normal;
             margin-bottom: 40px;
-        }    
-
-            ul{
-                margin: 30px;
-                list-style: none;
-
-                li{
-                    color: white;
-                    text-align: center;
-                    font-size: 20px;
-                    padding-top: 5px;
-                }
-            }
+        }
         
+        ul{
+            margin: 30px;
+            list-style: none;
+
+            li{
+                color: $color3;
+                text-align: center;
+                font-size: 20px;
+                padding-top: 5px;
+            }
+        }
 
         .booking{
-            color: white;
-
+            color: $color3;
 
             li a{
-                color: white;
-
+                color: $color3;
 
                 &:hover{
-                    color: #7613f8d2;
+                    color: $color2;
                 }
             }
         }
 
         div{
             text-align: center;
-            
+
             a{
                 color: black;
 
                 i{
-                    color: grey;
+                    color: $color4;
                     font-size: 30px;
                     padding: 15px;
                     padding-bottom: 50px;
                     transition: font-size 0.5s ;
-
+                
                     &:hover{
-                        color: #7613f8d2;
+                        color: $color2;
                         font-size: 40px;
                     }
                 }
@@ -210,7 +208,7 @@ html{
     }
 }
 
-/*-----------------INDEX----------------INDEX-----------  -----*/
+/*    INDEX    INDEX    */
 
 .gridContainerIndex{
     height: 100%;
@@ -222,14 +220,11 @@ html{
     grid-area:  "Main"
                 "LatestReleases"
                 "NextDates";
-
-
-/* MAIN  MAIN */
-
+    
     main{
         grid-column-start: 1;
         grid-column-end: 2;
-    
+                    
         padding-bottom: 50px;
         background-image: url("Imagenes/Fotodjs.png");
         background-size: cover;
@@ -237,12 +232,12 @@ html{
         .logoPrincipal{
             display: flex;
             justify-content: center;
-        
-            img{
-                height: 700px;
             
+            img{
+                height: 700px;   
             }
         }
+
         .redesSociales {
             display: flex;
             justify-content: center;
@@ -251,28 +246,32 @@ html{
             padding-top: 50px;
 
             a i {
-                color: grey;
+                color: $color4;
                 padding: 15px;
                 transition: font-size 0.5s;
 
                 &:hover{
-                    color: #7613f8d2;
-                    font-size: 70px;
+                    color: $color2;
+                    font-size: 60px;
                 }
             }
         }
     }
+}
+/*    LATEST RELEASES SECTION    */
 
-    /*LATEST RELEASES SECTION*/
-    h2{
-        font-size: 30px;
-        font-weight: normal;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        padding-top: 50px;
-        color: white;
-        text-align: center;
-        text-transform: capitalize;;
-    }
+h2{
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    color: $color3;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.gridContainerIndex{
+    
 
     .latestReleasesSection{
         padding: 30px;
@@ -281,7 +280,7 @@ html{
         grid-row-start: 2;
         grid-row-end: 3;
     
-        background-color: rgb(20, 18, 18);
+        background-color: $color1;
 
         .ultimosSencillos{
             display: flex;
@@ -289,7 +288,7 @@ html{
             justify-content: center;
             justify-content: space-around;
 
-            .spotifySongs{
+            & iframe{
                 height: 400px;
                 width: 400px;
                 flex-wrap: wrap;
@@ -311,30 +310,32 @@ html{
             button{
                 padding: 10px;
                 margin-top: 50px;
-                background-color: grey;
+                background-color: $color4;
                 border: 1px solid black;
                 transition: all 0.5s;
 
+                &:hover{
+                    background-color: $color2;
+                }
+
                 a{
                     text-decoration: none;
-                    color: rgb(20, 18, 18);
+                    color: $color1;
                     font-size: 22px;
                     font-family: Georgia, 'Times New Roman', Times, serif;
-                }
-                :hover{
-                    background-color: #7613f8d2;
                 }
             }
         }
     }
 }
-@media  screen and (max-width:768px){
+
+@media  screen and (max-width:768px) {
     .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
         height: 250px;
         width: 260px;
         transition: all 0.5s;
 
-        :hover{
+        &:hover{
             height: 260px;
             width: 260px;
         }
@@ -345,4 +346,49 @@ html{
         height: auto;
         width: 250px;
     }
+}
+
+/*    NEXT DATES SECTION    */
+
+.gridContainerIndex .nextDatesSection{
+    padding: 50px;
+    background-color: $color5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    .nextDatesDiv .fiestas{
+        display: flex;
+        flex-direction: column;
+
+        li{
+            color: $color3;
+            margin: 40px;
+            font-size: 25px;   
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 550px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 350px;
+        margin-top: 100px;
+    } 
+}
+@media screen and (max-width:768px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 250px;
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:320px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 150px;
+        margin-top: 100px;
+    }  
 }

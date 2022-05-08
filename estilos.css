@@ -1,299 +1,385 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0px;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-/*    HEADER HEADER     */
+/*    HEADER    HEADER    */
 .gridContainerHeader {
-  height: 90px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-area: "Header";
-}
-.gridContainerHeader header {
-  background-color: rgb(20, 18, 18);
-  width: 100%;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  padding: 10px;
-  position: fixed;
-}
-.gridContainerHeader header .contenedorBarra {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 15px;
-}
-.gridContainerHeader header .contenedorBarra ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.gridContainerHeader header .contenedorBarra ul li a {
-  display: flex;
-  justify-content: end;
-  text-decoration: none;
-  padding: 15px;
-  color: gray;
-  font-size: 26px;
-  font-family: "Roboto", sans-serif;
-  transition: all 0.5s;
-}
-.gridContainerHeader header .contenedorBarra ul li a:hover {
-  color: rgba(118, 19, 248, 0.8235294118);
-  font-size: 30px;
+    height: 90px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area: "Header";
 }
 
-.gridContainerHeader header .contenedorBarra a img {
-  height: 85px;
-  padding-left: 5px;
-  transition: height 0.5s;
+.gridContainerHeader header {
+    background-color: rgb(20, 18, 18);
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 10px;
+    position: fixed;
 }
-.gridContainerHeader header .contenedorBarra a img:hover {
-  height: 90px;
+
+.gridContainerHeader header .contenedorBarra {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.gridContainerHeader header .contenedorBarra img {
+    height: 85px;
+    padding-left: 5px;
+    transition: height 0.5s;
+}
+
+.gridContainerHeader header .contenedorBarra img:hover {
+    height: 90px;
+}
+
+.gridContainerHeader header .contenedorBarra ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gridContainerHeader header .contenedorBarra ul li a {
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    padding: 15px;
+    color: gray;
+    font-size: 26px;
+    font-family: "Roboto", sans-serif;
+    transition: all 0.5s;
+}
+
+.gridContainerHeader header .contenedorBarra ul li a:hover {
+    color: rgba(118, 19, 248, 0.8235294118);
+    font-size: 30px;
 }
 
 .gridContainerHeader header .contenedorBarra label i {
-  display: none;
+    display: none;
+    margin-right: 15px;
 }
 
 #btn-menu {
-  display: none;
+    display: none;
 }
 
 @media screen and (max-width: 1024px) {
-  #btn-menu {
-    display: none;
-  }
+    #btn-menu {
+        display: none;
+    }
 
-  .gridContainerHeader header .contenedorBarra label {
-    display: flex;
-    align-items: center;
-  }
-  .gridContainerHeader header .contenedorBarra label i {
-    display: flex;
+    .gridContainerHeader header .contenedorBarra label {
+        display: flex;
+        align-items: center;
+    }
+
+    .gridContainerHeader header .contenedorBarra label i {
+        display: flex;
+        color: rgba(118, 19, 248, 0.8235294118);
+        font-size: 45px;
+        cursor: pointer;
+    }
+
+    .gridContainerHeader header .contenedorBarra ul {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 95px;
+        left: -100%;
+        background: rgb(20, 18, 18);
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+
+    .gridContainerHeader header .contenedorBarra ul li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .gridContainerHeader header .contenedorBarra ul li :last-child {
+        padding: 2rem;
+    }
+
+    .gridContainerHeader header .contenedorBarra ul li .contacto {
+        display: none;
+    }
+
+    #btn-menu:checked~ul {
+        left: 0;
+        transition: all 0.5s;
+    }
+}
+
+/*    FOOTER    FOOTER    */
+.gridContainerFooter {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area: "Footer";
+}
+
+.gridContainerFooter footer {
+    background-color: black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.gridContainerFooter footer h3 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding-top: 50px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.gridContainerFooter footer ul {
+    margin: 30px;
+    list-style: none;
+}
+
+.gridContainerFooter footer ul li {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.gridContainerFooter footer .booking {
+    color: white;
+}
+
+.gridContainerFooter footer .booking li a {
+    color: white;
+}
+
+.gridContainerFooter footer .booking li a:hover {
+    color: rgba(118, 19, 248, 0.8235294118);
+}
+
+.gridContainerFooter footer div {
+    text-align: center;
+}
+
+.gridContainerFooter footer div a {
+    color: black;
+}
+
+.gridContainerFooter footer div a i {
+    color: gray;
+    font-size: 30px;
+    padding: 15px;
+    padding-bottom: 50px;
+    transition: font-size 0.5s;
+}
+
+.gridContainerFooter footer div a i:hover {
     color: rgba(118, 19, 248, 0.8235294118);
     font-size: 40px;
-    cursor: pointer;
-  }
-
-  .gridContainerHeader header .contenedorBarra ul {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 95px;
-    left: -100%;
-    background: rgb(20, 18, 18);
-    width: 100%;
-    height: 100vh;
-    right: 0;
-  }
-  .gridContainerHeader header .contenedorBarra ul li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
-
-  .gridContainerHeader header .contenedorBarra ul li:last-child {
-    padding: 2rem;
-  }
-
-  #btn-menu:checked ~ ul {
-    left: 0;
-    transition: all 0.5s;
-  }
-
-  .gridContainerHeader header .contenedorBarra ul li .contacto {
-    display: none;
-  }
-}
-/*   FOOTER    FOOTER   */
-.gridContainerFooter {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-area: "Footer";
-}
-.gridContainerFooter footer {
-  background-color: black;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.gridContainerFooter footer h3 {
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  padding-top: 50px;
-  font-weight: normal;
-  margin-bottom: 40px;
-}
-.gridContainerFooter footer ul {
-  margin: 30px;
-  list-style: none;
-}
-.gridContainerFooter footer ul li {
-  color: white;
-  text-align: center;
-  font-size: 20px;
-  padding-top: 5px;
-}
-.gridContainerFooter footer .booking {
-  color: white;
-}
-.gridContainerFooter footer .booking li a {
-  color: white;
-}
-.gridContainerFooter footer .booking li a:hover {
-  color: rgba(118, 19, 248, 0.8235294118);
-}
-.gridContainerFooter footer div {
-  text-align: center;
-}
-.gridContainerFooter footer div a {
-  color: black;
-}
-.gridContainerFooter footer div a i {
-  color: grey;
-  font-size: 30px;
-  padding: 15px;
-  padding-bottom: 50px;
-  transition: font-size 0.5s;
-}
-.gridContainerFooter footer div a i:hover {
-  color: rgba(118, 19, 248, 0.8235294118);
-  font-size: 40px;
 }
 
 @media screen and (max-width: 1024px) {
-  .gridContainerFooter {
-    width: 100%;
-  }
+    .gridContainerFooter {
+        width: 100%;
+    }
 }
-/*-----------------INDEX----------------INDEX-----------  -----*/
+
+/*    INDEX    INDEX    */
 .gridContainerIndex {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  grid-area: "Main" "LatestReleases" "NextDates";
-  /* MAIN  MAIN */
-  /*LATEST RELEASES SECTION*/
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-area: "Main""LatestReleases""NextDates";
 }
+
 .gridContainerIndex main {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  padding-bottom: 50px;
-  background-image: url("Imagenes/Fotodjs.png");
-  background-size: cover;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 50px;
+    background-image: url("Imagenes/Fotodjs.png");
+    background-size: cover;
 }
+
 .gridContainerIndex main .logoPrincipal {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 .gridContainerIndex main .logoPrincipal img {
-  height: 700px;
+    height: 700px;
 }
+
 .gridContainerIndex main .redesSociales {
-  display: flex;
-  justify-content: center;
-  font-size: 50px;
-  text-decoration: none;
-  padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    text-decoration: none;
+    padding-top: 50px;
 }
+
 .gridContainerIndex main .redesSociales a i {
-  color: grey;
-  padding: 15px;
-  transition: font-size 0.5s;
+    color: gray;
+    padding: 15px;
+    transition: font-size 0.5s;
 }
+
 .gridContainerIndex main .redesSociales a i:hover {
-  color: rgba(118, 19, 248, 0.8235294118);
-  font-size: 70px;
+    color: rgba(118, 19, 248, 0.8235294118);
+    font-size: 60px;
 }
-.gridContainerIndex h2 {
-  font-size: 30px;
-  font-weight: normal;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  padding-top: 50px;
-  color: white;
-  text-align: center;
-  text-transform: capitalize;
+
+/*    LATEST RELEASES SECTION    */
+h2 {
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
 }
+
 .gridContainerIndex .latestReleasesSection {
-  padding: 30px;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  background-color: rgb(20, 18, 18);
+    padding: 30px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-color: rgb(20, 18, 18);
 }
+
 .gridContainerIndex .latestReleasesSection .ultimosSencillos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
 }
-.gridContainerIndex .latestReleasesSection .ultimosSencillos .spotifySongs {
-  height: 400px;
-  width: 400px;
-  flex-wrap: wrap;
-  margin-top: 60px;
-  border-radius: 12px;
-  transition: all 0.5s;
+
+.gridContainerIndex .latestReleasesSection .ultimosSencillos iframe {
+    height: 400px;
+    width: 400px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    border-radius: 12px;
+    transition: all 0.5s;
 }
-.gridContainerIndex .latestReleasesSection .ultimosSencillos .spotifySongs:hover {
-  height: 410px;
-  width: 410px;
+
+.gridContainerIndex .latestReleasesSection .ultimosSencillos iframe:hover {
+    height: 410px;
+    width: 410px;
 }
+
 .gridContainerIndex .latestReleasesSection .contenedorBoton {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
+
 .gridContainerIndex .latestReleasesSection .contenedorBoton button {
-  padding: 10px;
-  margin-top: 50px;
-  background-color: grey;
-  border: 1px solid black;
-  transition: all 0.5s;
+    padding: 10px;
+    margin-top: 50px;
+    background-color: gray;
+    border: 1px solid black;
+    transition: all 0.5s;
 }
+
+.gridContainerIndex .latestReleasesSection .contenedorBoton button:hover {
+    background-color: rgba(118, 19, 248, 0.8235294118);
+}
+
 .gridContainerIndex .latestReleasesSection .contenedorBoton button a {
-  text-decoration: none;
-  color: rgb(20, 18, 18);
-  font-size: 22px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-.gridContainerIndex .latestReleasesSection .contenedorBoton button :hover {
-  background-color: rgba(118, 19, 248, 0.8235294118);
+    text-decoration: none;
+    color: rgb(20, 18, 18);
+    font-size: 22px;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 @media screen and (max-width: 768px) {
-  .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe {
-    height: 250px;
-    width: 260px;
-    transition: all 0.5s;
-  }
-  .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe :hover {
-    height: 260px;
-    width: 260px;
-  }
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe {
+        height: 250px;
+        width: 260px;
+        transition: all 0.5s;
+    }
+
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe:hover {
+        height: 260px;
+        width: 260px;
+    }
 }
+
 @media screen and (max-width: 320px) {
-  .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe {
-    height: auto;
-    width: 250px;
-  }
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe {
+        height: auto;
+        width: 250px;
+    }
+}
+
+/*    NEXT DATES SECTION    */
+.gridContainerIndex .nextDatesSection {
+    padding: 50px;
+    background-color: rgb(53, 51, 51);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.gridContainerIndex .nextDatesSection .nextDatesDiv .fiestas {
+    display: flex;
+    flex-direction: column;
+}
+
+.gridContainerIndex .nextDatesSection .nextDatesDiv .fiestas li {
+    color: white;
+    margin: 40px;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 1200px) {
+    .gridContainerIndex main .logoPrincipal img {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .gridContainerIndex main .logoPrincipal img {
+        height: 350px;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gridContainerIndex main .logoPrincipal img {
+        height: 250px;
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .gridContainerIndex main .logoPrincipal img {
+        height: 150px;
+        margin-top: 100px;
+    }
 }
 
 /*# sourceMappingURL=estilos.css.map */
