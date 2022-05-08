@@ -152,6 +152,7 @@ html{
             padding-top: 50px;
             font-weight: normal;
             margin-bottom: 40px;
+        }    
 
             ul{
                 margin: 30px;
@@ -164,13 +165,15 @@ html{
                     padding-top: 5px;
                 }
             }
-        } 
+        
 
         .booking{
             color: white;
 
+
             li a{
                 color: white;
+
 
                 &:hover{
                     color: #7613f8d2;
@@ -204,5 +207,142 @@ html{
 @media screen and(max-width:1024px) {
     .gridContainerFooter {
     width: 100%;
+    }
+}
+
+/*-----------------INDEX----------------INDEX-----------  -----*/
+
+.gridContainerIndex{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-area:  "Main"
+                "LatestReleases"
+                "NextDates";
+
+
+/* MAIN  MAIN */
+
+    main{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    
+        padding-bottom: 50px;
+        background-image: url("Imagenes/Fotodjs.png");
+        background-size: cover;
+
+        .logoPrincipal{
+            display: flex;
+            justify-content: center;
+        
+            img{
+                height: 700px;
+            
+            }
+        }
+        .redesSociales {
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            text-decoration: none;
+            padding-top: 50px;
+
+            a i {
+                color: grey;
+                padding: 15px;
+                transition: font-size 0.5s;
+
+                &:hover{
+                    color: #7613f8d2;
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+
+    /*LATEST RELEASES SECTION*/
+    h2{
+        font-size: 30px;
+        font-weight: normal;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        padding-top: 50px;
+        color: white;
+        text-align: center;
+        text-transform: capitalize;;
+    }
+
+    .latestReleasesSection{
+        padding: 30px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    
+        background-color: rgb(20, 18, 18);
+
+        .ultimosSencillos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+
+            .spotifySongs{
+                height: 400px;
+                width: 400px;
+                flex-wrap: wrap;
+                margin-top: 60px;
+                border-radius: 12px ;
+                transition: all 0.5s;
+
+                &:hover{
+                    height: 410px;
+                    width: 410px;
+                }
+            }
+        }
+
+        .contenedorBoton{
+            display: flex;
+            justify-content: center;
+
+            button{
+                padding: 10px;
+                margin-top: 50px;
+                background-color: grey;
+                border: 1px solid black;
+                transition: all 0.5s;
+
+                a{
+                    text-decoration: none;
+                    color: rgb(20, 18, 18);
+                    font-size: 22px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+                :hover{
+                    background-color: #7613f8d2;
+                }
+            }
+        }
+    }
+}
+@media  screen and (max-width:768px){
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
+        height: 250px;
+        width: 260px;
+        transition: all 0.5s;
+
+        :hover{
+            height: 260px;
+            width: 260px;
+        }
+    }
+}
+@media  screen and (max-width:320px) {
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
+        height: auto;
+        width: 250px;
     }
 }
