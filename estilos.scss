@@ -1,0 +1,394 @@
+$color1: rgb(20, 18, 18);
+$color2: #7613f8d2;
+$color3: white;
+$color4: gray;
+$color5: rgb(53, 51, 51);
+
+*{
+    margin: 0;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*    HEADER    HEADER    */
+.gridContainerHeader{
+    height: 90px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area: "Header";
+
+    header{
+        background-color: $color1;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        
+        padding: 10px;
+        position: fixed;
+
+        .contenedorBarra{
+            display: flex;
+            justify-content: space-between;
+            padding-right: 15px;
+
+            img{
+                height: 85px;
+                padding-left: 5px;
+                transition: height 0.5s;
+
+                &:hover{
+                    height: 90px;
+                }
+            }
+
+            ul{
+                display: flex;
+                list-style: none;
+                align-items: center;
+                flex-wrap: wrap;
+                
+                li a{
+                    display: flex;
+                    justify-content: end;
+                    text-decoration: none;
+                    padding: 15px;
+                    color: $color4;
+                    font-size: 26px;
+                    font-family: 'Roboto', sans-serif;
+                    transition: all 0.5s;
+
+                    &:hover{
+                        color: $color2;
+                        font-size: 30px;
+                    }
+                }
+            }
+            label i{
+                display: none;
+                margin-right: 15px;
+            }
+        }
+    } 
+}
+#btn-menu{
+    display: none;
+    
+}
+
+@media screen and (max-width:1024px){
+    #btn-menu{
+        display: none;
+    }
+
+    .gridContainerHeader header .contenedorBarra label{
+        display: flex;
+        align-items: center;
+
+        i{
+            display: flex;
+            color: $color2;
+            font-size: 45px;
+            cursor: pointer;
+        }
+    }
+
+    .gridContainerHeader header .contenedorBarra ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 95px;
+        left: -100%;
+        background: $color1;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        
+        li{
+            display: flex;
+            justify-content: center;
+            margin: 0;
+
+            :last-child{
+                padding: 2rem;
+            }
+            .contacto{
+                display: none;
+            }
+        }
+    }
+    #btn-menu:checked ~ ul{
+        left: 0;
+        transition: all 0.5s;
+    }
+}
+
+/*    FOOTER    FOOTER    */
+
+.gridContainerFooter{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area: "Footer";
+
+    footer{
+        background-color: black;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        h3{
+            color: $color3;
+            text-align: center;
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding-top: 50px;
+            font-weight: normal;
+            margin-bottom: 40px;
+        }
+        
+        ul{
+            margin: 30px;
+            list-style: none;
+
+            li{
+                color: $color3;
+                text-align: center;
+                font-size: 20px;
+                padding-top: 5px;
+            }
+        }
+
+        .booking{
+            color: $color3;
+
+            li a{
+                color: $color3;
+
+                &:hover{
+                    color: $color2;
+                }
+            }
+        }
+
+        div{
+            text-align: center;
+
+            a{
+                color: black;
+
+                i{
+                    color: $color4;
+                    font-size: 30px;
+                    padding: 15px;
+                    padding-bottom: 50px;
+                    transition: font-size 0.5s ;
+                
+                    &:hover{
+                        color: $color2;
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:1024px) {
+    .gridContainerFooter {
+    width: 100%;
+    }
+}
+
+/*    INDEX    INDEX    */
+
+.gridContainerIndex{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-area:  "Main"
+                "LatestReleases"
+                "NextDates";
+    
+    main{
+        grid-column-start: 1;
+        grid-column-end: 2;
+                    
+        padding-bottom: 50px;
+        background-image: url("Imagenes/Fotodjs.png");
+        background-size: cover;
+
+        .logoPrincipal{
+            display: flex;
+            justify-content: center;
+            
+            img{
+                height: 700px;   
+            }
+        }
+
+        .redesSociales {
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            text-decoration: none;
+            padding-top: 50px;
+
+            a i {
+                color: $color4;
+                padding: 15px;
+                transition: font-size 0.5s;
+
+                &:hover{
+                    color: $color2;
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
+/*    LATEST RELEASES SECTION    */
+
+h2{
+    font-size: 30px;
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 50px;
+    color: $color3;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.gridContainerIndex{
+    
+
+    .latestReleasesSection{
+        padding: 30px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    
+        background-color: $color1;
+
+        .ultimosSencillos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;
+
+            & iframe{
+                height: 400px;
+                width: 400px;
+                flex-wrap: wrap;
+                margin-top: 60px;
+                border-radius: 12px ;
+                transition: all 0.5s;
+
+                &:hover{
+                    height: 410px;
+                    width: 410px;
+                }
+            }
+        }
+
+        .contenedorBoton{
+            display: flex;
+            justify-content: center;
+
+            button{
+                padding: 10px;
+                margin-top: 50px;
+                background-color: $color4;
+                border: 1px solid black;
+                transition: all 0.5s;
+
+                &:hover{
+                    background-color: $color2;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $color1;
+                    font-size: 22px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width:768px) {
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
+        height: 250px;
+        width: 260px;
+        transition: all 0.5s;
+
+        &:hover{
+            height: 260px;
+            width: 260px;
+        }
+    }
+}
+@media  screen and (max-width:320px) {
+    .gridContainerIndex .latestReleasesSection .ultimosSencillos iframe{
+        height: auto;
+        width: 250px;
+    }
+}
+
+/*    NEXT DATES SECTION    */
+
+.gridContainerIndex .nextDatesSection{
+    padding: 50px;
+    background-color: $color5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+    .nextDatesDiv .fiestas{
+        display: flex;
+        flex-direction: column;
+
+        li{
+            color: $color3;
+            margin: 40px;
+            font-size: 25px;   
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 550px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 350px;
+        margin-top: 100px;
+    } 
+}
+@media screen and (max-width:768px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 250px;
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width:320px) {
+    .gridContainerIndex main .logoPrincipal img{
+        height: 150px;
+        margin-top: 100px;
+    }  
+}
