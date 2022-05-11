@@ -3,6 +3,9 @@ $color2: #7613f8d2;
 $color3: white;
 $color4: gray;
 $color5: rgb(53, 51, 51);
+$color6: black;
+$color7: rgb(47, 87, 88);
+$color8: rgb(118, 61, 184);
 
 *{
     margin: 0;
@@ -16,6 +19,10 @@ html{
 .gridContainerHeader{
     height: 90px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -30,7 +37,7 @@ html{
         grid-row-end: 2;
         
         padding: 10px;
-        position: fixed;
+        
 
         .contenedorBarra{
             display: flex;
@@ -139,7 +146,7 @@ html{
     grid-area: "Footer";
 
     footer{
-        background-color: black;
+        background-color: $color6;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
@@ -158,6 +165,7 @@ html{
         ul{
             margin: 30px;
             list-style: none;
+            padding: 0;
 
             li{
                 color: $color3;
@@ -183,7 +191,7 @@ html{
             text-align: center;
 
             a{
-                color: black;
+                color: $color6;
 
                 i{
                     color: $color4;
@@ -234,7 +242,8 @@ html{
             justify-content: center;
             
             img{
-                height: 700px;   
+                height: 700px; 
+                padding-top: 100px ;  
             }
         }
 
@@ -311,7 +320,7 @@ h2{
                 padding: 10px;
                 margin-top: 50px;
                 background-color: $color4;
-                border: 1px solid black;
+                border: 1px solid $color6;
                 transition: all 0.5s;
 
                 &:hover{
@@ -404,15 +413,16 @@ h2{
     grid-area:  "Releases";
 
     .musicReleases{
-        background-color: rgb(53, 51, 51);
+        background-color: $color5;
 
         div .tituloReleases{
-            padding-top: 100px;
+            padding-top: 200px;
         }
 
         .releases{
             display: flex;
             flex-wrap: wrap;
+            padding-top: 50px;
             justify-content: center;
             justify-content: space-around;
             
@@ -485,7 +495,8 @@ h2{
     grid-area:  "Contenido";
 
     .sectionBio{
-        background-color: rgb(53, 51, 51);
+        background-color: $color5;
+        padding-top: 150px;
 
         .divBio{
             display: flex;
@@ -508,7 +519,7 @@ h2{
                 font-size: 20px;
                 align-items: center;
                 padding: 80px;
-                color: grey;
+                color: $color4;
             }
         }
     }   
@@ -537,3 +548,118 @@ h2{
 
 /*-------------------------------------------------------    MEDIA    MEDIA    MEDIA     --------------------------------------------------------*/
 
+#carouselExampleCaptions{
+    margin-top: 105px;
+}
+
+/*-------------------------------------------------------    MEDIA    MEDIA    MEDIA     --------------------------------------------------------*/
+
+.gridContainerFormulario{
+    height: 100%;
+    width: 100%;
+    padding-top: 50px ;
+
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area:  "Formulario";
+
+    .sectionFormulario{
+        background-color: $color5;
+        height: 100%;
+
+        .tituloFormulario{
+            font-size: 35px;
+            margin-top: 100px;
+        }
+
+        div{
+            width: 500px;
+            background-color: $color7;
+            padding: 30px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 4px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: white; 
+
+            h4{
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            .controls{
+                width: 96%;
+                background-color: $color7;
+                padding: 10px;
+                border-radius: 4px;
+                margin-bottom: 16px;
+                border: 1px solid $color3;
+                font-size: 18px;
+            }
+
+            textarea{
+                width: 100%;
+            }
+
+            p{
+                height: 40px;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            a{
+                color: $color3;
+                text-decoration: none;
+
+                &:hover{
+                    color: $color3;
+                    text-decoration: underline;
+                }
+            }
+
+            .buttons{
+                width: 100%;
+                background: $color2;
+                border: none;
+                padding: 12px;
+                color: $color3;
+                margin: 16px 0;
+                font-size: 16px;
+                transition: all 1s;
+
+                &:hover{
+                    background: $color8;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    .gridContainerFormulario .sectionFormulario div{
+    width: 400px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .gridContainerFormulario .sectionFormulario div{
+    width: 300px;
+    }
+}
+@media screen and (max-width:600px) {
+    .gridContainerFormulario .tituloFormulario{
+        font-size: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 320px) {
+    .gridContainerIndex main .logoPrincipal img {
+        height: 150px;
+        margin-top: 100px;
+    }
+}
