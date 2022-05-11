@@ -475,4 +475,65 @@ h2{
 }
 
 /*-------------------------------------------------------    BIO    BIO    BIO    --------------------------------------------------------*/
+.gridContainerBio{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-area:  "Contenido";
+
+    .sectionBio{
+        background-color: rgb(53, 51, 51);
+
+        .divBio{
+            display: flex;
+            flex-wrap: nowrap;
+
+            img{
+                height:900px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 100px;
+                transition: height 0.5s ;
+
+                :hover{
+                    height: 905px;
+                }
+            }
+            p{
+                display: flex;
+                font-size: 20px;
+                align-items: center;
+                padding: 80px;
+                color: grey;
+            }
+        }
+    }   
+}
+@media screen and (max-width:1500px){
+    .gridContainerBio .sectionBio .divBio{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{
+            height: 700px;
+        }
+    }
+}
+@media screen and (max-width:768px){
+    .gridContainerBio .sectionBio .divBio img{
+        height: 500px;
+    }
+}
+@media screen and (max-width:600px){
+    .gridContainerBio .sectionBio .divBio img{
+        height: 400px;
+    }
+}
+
+/*-------------------------------------------------------    MEDIA    MEDIA    MEDIA     --------------------------------------------------------*/
 
