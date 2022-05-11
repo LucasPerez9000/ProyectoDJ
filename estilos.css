@@ -11,6 +11,10 @@ html {
 .gridContainerHeader {
   height: 90px;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
@@ -24,7 +28,6 @@ html {
   grid-row-start: 1;
   grid-row-end: 2;
   padding: 10px;
-  position: fixed;
 }
 .gridContainerHeader header .contenedorBarra {
   display: flex;
@@ -139,6 +142,7 @@ html {
 .gridContainerFooter footer ul {
   margin: 30px;
   list-style: none;
+  padding: 0;
 }
 .gridContainerFooter footer ul li {
   color: white;
@@ -200,6 +204,7 @@ html {
 }
 .gridContainerIndex main .logoPrincipal img {
   height: 700px;
+  padding-top: 100px;
 }
 .gridContainerIndex main .redesSociales {
   display: flex;
@@ -348,11 +353,12 @@ h2 {
   background-color: rgb(53, 51, 51);
 }
 .gridContainerMusic .musicReleases div .tituloReleases {
-  padding-top: 100px;
+  padding-top: 200px;
 }
 .gridContainerMusic .musicReleases .releases {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 50px;
   justify-content: center;
   justify-content: space-around;
 }
@@ -417,6 +423,7 @@ h2 {
 }
 .gridContainerBio .sectionBio {
   background-color: rgb(53, 51, 51);
+  padding-top: 150px;
 }
 .gridContainerBio .sectionBio .divBio {
   display: flex;
@@ -438,7 +445,7 @@ h2 {
   font-size: 20px;
   align-items: center;
   padding: 80px;
-  color: grey;
+  color: gray;
 }
 
 @media screen and (max-width: 1500px) {
@@ -462,5 +469,107 @@ h2 {
   }
 }
 /*-------------------------------------------------------    MEDIA    MEDIA    MEDIA     --------------------------------------------------------*/
+#carouselExampleCaptions {
+  margin-top: 105px;
+}
+
+/*-------------------------------------------------------    MEDIA    MEDIA    MEDIA     --------------------------------------------------------*/
+.gridContainerFormulario {
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-area: "Formulario";
+}
+.gridContainerFormulario .sectionFormulario {
+  background-color: rgb(53, 51, 51);
+  height: 100%;
+}
+.gridContainerFormulario .sectionFormulario .tituloFormulario {
+  font-size: 35px;
+  margin-top: 100px;
+}
+.gridContainerFormulario .sectionFormulario div {
+  width: 500px;
+  background-color: rgb(47, 87, 88);
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 4px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+.gridContainerFormulario .sectionFormulario div h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.gridContainerFormulario .sectionFormulario div .controls {
+  width: 96%;
+  background-color: rgb(47, 87, 88);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid white;
+  font-size: 18px;
+}
+.gridContainerFormulario .sectionFormulario div textarea {
+  width: 100%;
+}
+.gridContainerFormulario .sectionFormulario div p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+.gridContainerFormulario .sectionFormulario div a {
+  color: white;
+  text-decoration: none;
+}
+.gridContainerFormulario .sectionFormulario div a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.gridContainerFormulario .sectionFormulario div .buttons {
+  width: 100%;
+  background: rgba(118, 19, 248, 0.8235294118);
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  transition: all 1s;
+}
+.gridContainerFormulario .sectionFormulario div .buttons:hover {
+  background: rgb(118, 61, 184);
+}
+
+@media screen and (max-width: 1000px) {
+  .gridContainerFormulario .sectionFormulario div {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gridContainerFormulario .sectionFormulario div {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gridContainerFormulario .tituloFormulario {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 320px) {
+  .gridContainerIndex main .logoPrincipal img {
+    height: 150px;
+    margin-top: 100px;
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */
