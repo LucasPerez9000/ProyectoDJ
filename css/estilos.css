@@ -195,7 +195,7 @@ html {
   grid-column-start: 1;
   grid-column-end: 2;
   padding-bottom: 50px;
-  background-image: url("../Imagenes/fotodjsindex.png");
+  background-image: url("../imagenes/fotodjsindex.png");
   background-size: cover;
 }
 .gridContainerIndex main .logoPrincipal {
@@ -203,7 +203,6 @@ html {
   justify-content: center;
 }
 .gridContainerIndex main .logoPrincipal img {
-  height: 700px;
   padding-top: 100px;
 }
 .gridContainerIndex main .redesSociales {
