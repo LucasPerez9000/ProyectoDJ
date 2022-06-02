@@ -304,6 +304,7 @@ h2{
                 flex-wrap: wrap;
                 margin-top: 60px;
                 border-radius: 12px ;
+                border: 1px solid black;
                 transition: all 0.5s;
 
                 &:hover{
@@ -433,11 +434,13 @@ h2{
                 width: 360px;
                 padding: 40px;
                 border-radius: 50px;
+                
                 transition: all 0.5s;
 
                 &:hover{
                     height: 370px;
                     width: 370px;
+                    
                 }
             }
         }
@@ -517,9 +520,9 @@ h2{
             }
             p{
                 display: flex;
-                font-size: 20px;
+                font-size: 23px;
                 align-items: center;
-                padding: 80px;
+                padding: 100px;
                 color: $color4;
             }
         }
