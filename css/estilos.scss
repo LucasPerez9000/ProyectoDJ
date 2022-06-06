@@ -543,10 +543,25 @@ h2{
     .gridContainerBio .sectionBio .divBio img{
         height: 500px;
     }
+    .gridContainerBio .sectionBio .divBio p{
+        font-size: 20px;
+        padding-top: 0;
+        padding-left: 70px;
+        padding-right: 70px;
+        display: flex;
+        justify-content: center;
+    }
 }
 @media screen and (max-width:600px){
     .gridContainerBio .sectionBio .divBio img{
-        height: 400px;
+        height: 350px;
+        padding: 60px;
+    }
+}
+@media screen and (max-width:470px){
+    .gridContainerBio .sectionBio .divBio p{
+        display: flex;
+        justify-content: center;
     }
 }
 
