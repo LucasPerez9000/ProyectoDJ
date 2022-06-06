@@ -555,6 +555,11 @@ h2{
 #carouselExampleCaptions{
     margin-top: 0px;
 }
+@media screen and (max-width:600px) {
+    #carouselExampleCaptions{
+        margin-top: 100px;
+    }
+}
 
 /*-------------------------------------------------------    BE PART    BE PART    BE PART     --------------------------------------------------------*/
 
